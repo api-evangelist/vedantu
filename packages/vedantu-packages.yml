@@ -1,0 +1,28 @@
+generated: '2026-07-21'
+method: searched
+source: npm registry search + github.com/Vedantu org inventory
+notes: >-
+  Vedantu ships no public API client SDKs. The npm package below is a
+  first-party open-source utility library (published by vedantuadmin /
+  admin@vedantu.com), and the EI API kit is a downloadable Java jar/war
+  integration artifact distributed via GitHub releases — neither is a client
+  SDK for a hosted Vedantu API, so no SDKs rating pointer is emitted.
+packages:
+  - language: javascript
+    registry: npm
+    name: gif-canvas-renderer
+    url: https://www.npmjs.com/package/gif-canvas-renderer
+    install: npm install gif-canvas-renderer
+    official: true
+    sdk: false
+    description: Library to parse and render GIFs on canvas (repo github.com/Vedantu/GIFParser).
+  - language: java
+    registry: github-releases
+    name: vedantu-ei-api
+    url: https://github.com/Vedantu/vedantu-ei-api/releases
+    install: Download vedantu-ei-api.jar / vedantu-ei-api.war from GitHub releases (Ant build)
+    official: true
+    sdk: false
+    description: >-
+      Vedantu External-Integration API server-side kit institutes deploy so
+      Vedantu can integrate with their systems (legacy, last push 2014).

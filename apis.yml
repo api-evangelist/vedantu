@@ -1,7 +1,16 @@
 aid: vedantu
 name: Vedantu
-description: 'Vedantu is a company surfaced as a portfolio company of accel and added to the API Evangelist
-  network as a stub for enrichment. Sector: media. This profile is a lead awaiting the enrichment pipeline.'
+description: >-
+  Vedantu is an Indian online-learning (edtech) company headquartered in
+  Bangalore that delivers LIVE interactive classes, recorded courses, offline
+  centres, and one-to-one tutoring for school students from Class 1 to 12 and
+  competitive-exam aspirants, covering CBSE, ICSE, IGCSE and major State Boards
+  plus JEE, NEET, CUET and Olympiad preparation, alongside a large free library
+  of NCERT solutions, revision notes, sample papers and study material. Backed
+  by Accel, Vedantu is consumer-facing and operates no public developer API
+  today; its only published integration surface is a legacy External-Integration
+  (EI) kit for institutes on GitHub, though it does publish an llms.txt for
+  agents.
 url: https://raw.githubusercontent.com/api-evangelist/vedantu/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,12 +18,30 @@ x-backed-by:
 - accel
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Media
+- Education
+- EdTech
+- Online Learning
+- Tutoring
+- Test Preparation
+- India
+image: https://avatars.githubusercontent.com/u/4867113?v=4
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,4 +50,27 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: http://www.vedantu.com
+  url: https://www.vedantu.com
+- type: Blog
+  url: https://www.vedantu.com/blog
+- type: Support
+  url: https://www.vedantu.com/v/contacts
+- type: PrivacyPolicy
+  url: https://www.vedantu.com/privacy-policy
+- type: TermsOfService
+  url: https://www.vedantu.com/tnc
+- type: GitHubOrganization
+  url: https://github.com/Vedantu
+- type: LLMsTxt
+  url: llms/vedantu-llms.txt
+- type: ErrorCatalog
+  url: errors/vedantu-error-codes.yml
+- type: Packages
+  url: packages/vedantu-packages.yml
+- type: DomainSecurity
+  url: security/vedantu-domain-security.yml
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 5
+  pass: local-v1

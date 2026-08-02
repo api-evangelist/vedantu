@@ -1,0 +1,57 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/Vedantu/vedantu-ei-api
+format: vendor-error-codes
+notes: >-
+  Error-code registry of the Vedantu External-Integration (EI) API — the
+  server-side integration kit Vedantu publishes for institutes
+  (github.com/Vedantu/vedantu-ei-api, last code push 2014-01-09, so a legacy
+  surface). Codes are defined in
+  src/com/vedantu/ei/commons/enums/VedantuErrorCode.java. Vedantu operates no
+  other public developer API today.
+envelope:
+  fields:
+    - errorCode
+    - errorMessage
+    - result
+  description: >-
+    Every EI API response extends AbstractVedantuResponse with errorCode,
+    errorMessage, and result; when errorCode is present the result payload is
+    not populated.
+error_codes:
+  - code: UNHANDLED_ERROR
+    title: Unhandled server error
+    source: src/com/vedantu/ei/commons/enums/VedantuErrorCode.java
+  - code: AUTHENTICATION_FAILED
+    title: Authentication failed
+    source: src/com/vedantu/ei/commons/enums/VedantuErrorCode.java
+  - code: INVALID_TEST_CODE
+    title: Invalid test code
+    source: src/com/vedantu/ei/commons/enums/VedantuErrorCode.java
+  - code: INVALID_USER_ID
+    title: Invalid user id
+    source: src/com/vedantu/ei/commons/enums/VedantuErrorCode.java
+  - code: INVALID_CONTENT_TYPE
+    title: Invalid content type
+    source: src/com/vedantu/ei/commons/enums/VedantuErrorCode.java
+  - code: UPLOAD_FAILED
+    title: Upload failed
+    source: src/com/vedantu/ei/commons/enums/VedantuErrorCode.java
+  - code: USER_ALREADY_EXISTS
+    title: User already exists
+    source: src/com/vedantu/ei/commons/enums/VedantuErrorCode.java
+  - code: MISSING_PARAMETERS
+    title: Missing parameters
+    source: src/com/vedantu/ei/commons/enums/VedantuErrorCode.java
+  - code: INVALID_CLASS_CODE
+    title: Invalid class code
+    source: src/com/vedantu/ei/commons/enums/VedantuErrorCode.java
+endpoints:
+  - path: /register
+    servlet: com.vedantu.ei.servlets.RegServlet
+  - path: /authenticate
+    servlet: com.vedantu.ei.servlets.AuthServlet
+  - path: /enroll
+    servlet: com.vedantu.ei.servlets.EnrollServlet
+  - path: /uploadTestAttemptData
+    servlet: com.vedantu.ei.servlets.UploadTestAttemptsServlet
