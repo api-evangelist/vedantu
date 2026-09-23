@@ -1,13 +1,12 @@
 generated: '2026-07-21'
 method: searched
 host: https://www.vedantu.com
-notes: >-
-  No /.well-known/ discovery documents are published (the site returns 200
-  SPA-fallback for arbitrary paths, but these endpoints return real 404s).
-  Vedantu does publish /llms.txt at the site root — captured verbatim in
-  llms/vedantu-llms.txt. No WellKnown rating pointer is emitted because no
-  document was found.
-documents:
+notes: No /.well-known/ discovery documents are published (the site returns 200 SPA-fallback for arbitrary
+  paths, but these endpoints return real 404s). Vedantu does publish /llms.txt at the site root — captured
+  verbatim in llms/vedantu-llms.txt. No WellKnown rating pointer is emitted because no document was found.
+hosts:
+- host: https://www.vedantu.com
+  documents:
   - path: /.well-known/security.txt
     status: 404
   - path: /.well-known/openid-configuration
@@ -18,3 +17,8 @@ documents:
     status: 404
   - path: /.well-known/ai-plugin.json
     status: 404
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
